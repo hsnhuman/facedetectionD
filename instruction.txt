@@ -10,8 +10,8 @@ const db = knex({
   connection: {
  (your localhost)   host: "127.0.0.1",
 (your database port(this is deafult postgresql))  port: 5432,
- (your postgresql username)   user: "hassan",
- (your postgresql password)   password: "lamp1388",
+ (your postgresql username)   user: "jim",
+ (your postgresql password)   password: "12",
  (name of the data base with the two tables)   database: "faceD",
   },
 });
