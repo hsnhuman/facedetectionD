@@ -1,0 +1,18 @@
+1.instal postgresql
+2.run postgresql on your terminal and create a database
+3. you will need to create two (2) tables
+4.the first table: CREATE TABLE users ( id serial PRIMARY KEY, Name VARCHAR(100),Email text UNIQUE NOT NULL, entries BIGINIT DEFAULT 0, joined TIMESTAMP NOT NULL);
+5.the second table: CREATE TABLE LOGIN ( id serial PRIMARY KEY, hash VARCHAR(100) NOT NULL, Email text UNIQUE NOT NULL);
+6.make sure that the first letter to your table colummns is upper case as is written here other wise the server will not recognise it
+7.in you server.js file 
+const db = knex({
+  client: "pg",
+  connection: {
+ (your localhost)   host: "127.0.0.1",
+(your database port(this is deafult postgresql))  port: 5432,
+ (your postgresql username)   user: "hassan",
+ (your postgresql password)   password: "lamp1388",
+ (name of the data base with the two tables)   database: "faceD",
+  },
+});
+once you have written the addres of the database in your server.js file it should work like a charm!
